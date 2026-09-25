@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidequest starter</title>
+<link rel="stylesheet" href="sidequest.css">
+<style>
+  /* Page layout only. Everything visual comes from sidequest.css. */
+  .page { max-width: 1080px; margin: 0 auto; padding: var(--space-12) var(--space-6); display: grid; gap: var(--space-12); }
+  .hero { display: grid; gap: var(--space-4); }
+  .hero .sq-type-hero { margin: 0; }
+  .hero p { margin: 0; }
+  .hero .lede { max-width: 34em; color: var(--text-muted); font-size: 18px; line-height: 28px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+  .row--wide { gap: var(--space-4); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); }
+  section { display: grid; gap: var(--space-4); }
+  section > h2 { margin: 0; color: var(--text-muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); align-items: start; }
+  .stack { display: grid; gap: var(--space-3); }
+  .sign { color: var(--sunset-text); transform: rotate(-4deg); transform-origin: left; margin: 0; }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="hero">
+    <div class="top">
+      <p class="sq-type-overline">Explore · Build · Play · Grow</p>
+      <button class="sq-btn sq-btn--ghost sq-btn--sm" id="theme">Switch to Day</button>
+    </div>
+    <h1 class="sq-type-hero">Side<span class="sq-glow-text">quest</span></h1>
+    <p class="lede">A personal design system for a more intentional, curious and adventurous life. Built for work, play, travel and everything in between.</p>
+    <div class="row">
+      <span class="sq-tag sq-tag--solid sq-tag--purple">Curiosity</span>
+      <span class="sq-tag sq-tag--solid sq-tag--sky">Adventure</span>
+      <span class="sq-tag sq-tag--solid sq-tag--sage">Creativity</span>
+      <span class="sq-tag sq-tag--solid sq-tag--sunset">Balance</span>
+    </div>
+    <p class="sq-type-hand sign">Same curious human.</p>
+  </header>
+
+  <section>
+    <h2 class="sq-type-overline">Buttons and tags</h2>
+    <div class="row row--wide">
+      <button class="sq-btn sq-btn--primary">Plan a trip</button>
+      <button class="sq-btn sq-btn--secondary">Save idea</button>
+      <button class="sq-btn sq-btn--ghost">Skip for now</button>
+      <button class="sq-btn sq-btn--primary" disabled>Fully booked</button>
+      <button class="sq-btn sq-btn--ghost sq-btn--icon" aria-label="Add"><svg class="sq-icon" width="18" height="18" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></svg></button>
+    </div>
+    <div class="row">
+      <span class="sq-tag sq-tag--purple">Work</span><span class="sq-tag sq-tag--teal">Travel</span><span class="sq-tag sq-tag--sky">Gaming</span>
+      <span class="sq-tag sq-tag--sage">Health</span><span class="sq-tag sq-tag--sunset">Finance</span><span class="sq-tag sq-tag--neutral">Home</span>
+      <span class="sq-tag sq-tag--pink">Ideas</span><span class="sq-tag sq-tag--neutral">Personal</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sq-type-overline">Cards and alerts</h2>
+    <div class="grid">
+      <article class="sq-card">
+        <div class="sq-card__media"><svg viewBox="0 0 320 180" role="img" aria-label="A torii gate at sunset"><defs><linearGradient id="kyoto-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--purple)"/><stop offset=".62" style="stop-color:var(--pink)"/><stop offset="1" style="stop-color:var(--coral)"/></linearGradient></defs><rect width="320" height="132" fill="url(#kyoto-sky)"/><circle cx="104" cy="118" r="30" style="fill:var(--sunset)"/><path d="M0 122 C40 108 70 114 100 118 S160 104 200 112 S270 106 320 116 V132 H0Z" style="fill:var(--purple)"/><rect y="130" width="320" height="50" style="fill:var(--on-accent)"/><g style="fill:var(--sunset)"><rect x="72" y="140" width="64" height="4" rx="2"/><rect x="84" y="150" width="40" height="4" rx="2"/><rect x="96" y="160" width="16" height="4" rx="2"/></g><g style="fill:var(--on-accent)"><path d="M180 58 Q228 70 276 58 L272 68 Q228 78 184 68 Z"/><rect x="188" y="82" width="80" height="6"/><rect x="198" y="66" width="8" height="66"/><rect x="250" y="66" width="8" height="66"/><rect x="225" y="68" width="6" height="14"/></g></svg></div>
+        <div class="sq-card__body">
+          <div class="sq-card__top"><span class="sq-card__eyebrow sq-tone-text--teal">Travel</span>
+            <button class="sq-card__fav" aria-pressed="false" aria-label="Favorite"><svg class="sq-icon" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M178,36c-20.09,0-37.92,7.93-50,21.56C115.92,43.93,98.09,36,78,36a66.08,66.08,0,0,0-66,66c0,72.34,105.81,130.14,110.31,132.57a12,12,0,0,0,11.38,0C138.19,232.14,244,174.34,244,102A66.08,66.08,0,0,0,178,36Zm-5.49,142.36A328.69,328.69,0,0,1,128,210.16a328.69,328.69,0,0,1-44.51-31.8C61.82,159.77,36,131.42,36,102A42,42,0,0,1,78,60c17.8,0,32.7,9.4,38.89,24.54a12,12,0,0,0,22.22,0C145.3,69.4,160.2,60,178,60a42,42,0,0,1,42,42C220,131.42,194.18,159.77,172.51,178.36Z"/></svg></button></div>
+          <h3 class="sq-card__title">Kyoto, Japan</h3>
+          <div class="sq-card__desc">New places. Same curious human.</div>
+        </div>
+      </article>
+      <div class="stack">
+        <div class="sq-alert sq-alert--success" role="status"><svg class="sq-icon sq-alert__icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+          <div><p class="sq-alert__title">Success</p><div class="sq-alert__msg">Your changes have been saved.</div></div>
+          <button class="sq-alert__close" aria-label="Dismiss"><svg class="sq-icon" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></button></div>
+        <div class="sq-alert sq-alert--info" role="status"><svg class="sq-icon sq-alert__icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-4,48a12,12,0,1,1-12,12A12,12,0,0,1,124,72Zm12,112a16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40a8,8,0,0,1,0,16Z"/></svg>
+          <div><p class="sq-alert__title">Heads up</p><div class="sq-alert__msg">Flights to Osaka drop in price after Sunday.</div></div>
+          <button class="sq-alert__close" aria-label="Dismiss"><svg class="sq-icon" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></button></div>
+        <div class="sq-alert sq-alert--danger" role="alert"><svg class="sq-icon sq-alert__icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-8,56a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm8,104a12,12,0,1,1,12-12A12,12,0,0,1,128,184Z"/></svg>
+          <div><p class="sq-alert__title">Need attention</p><div class="sq-alert__msg">Sync failed. Check your connection and try again.</div></div>
+          <button class="sq-alert__close" aria-label="Dismiss"><svg class="sq-icon" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sq-type-overline">Forms</h2>
+    <div class="grid">
+      <div class="stack">
+        <div class="sq-field"><label class="sq-field__label" for="trip">Trip name</label>
+          <div class="sq-field__box"><input id="trip" class="sq-field__control" placeholder="Type something…"></div>
+          <p class="sq-field__hint">Shows on the card and in search.</p></div>
+        <div class="sq-field"><label class="sq-field__label" for="q">Search</label>
+          <div class="sq-field__box sq-field__box--icon"><svg class="sq-icon sq-field__icon" width="18" height="18" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"/></svg><input id="q" type="search" class="sq-field__control" placeholder="Search…"></div></div>
+        <div class="sq-field"><label class="sq-field__label" for="cat">Category</label>
+          <div class="sq-field__box"><select id="cat" class="sq-field__control sq-select is-empty"><option value="" disabled selected>Select an option…</option><option>Work</option><option>Travel</option><option>Play</option><option>Health</option><option>Finance</option><option>Ideas</option></select><svg class="sq-icon sq-select__chevron" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/></svg></div></div>
+      </div>
+      <div class="stack">
+        <span class="sq-switch"><button id="sync" class="sq-switch__track is-on" role="switch" aria-checked="true"><span class="sq-switch__knob"></span></button><label class="sq-switch__label" for="sync">Sync to vault</label></span>
+        <span class="sq-switch"><button id="offline" class="sq-switch__track" role="switch" aria-checked="false"><span class="sq-switch__knob"></span></button><label class="sq-switch__label" for="offline">Offline mode</label></span>
+        <label class="sq-check"><input type="checkbox" class="sq-check__input" checked><span class="sq-check__box" aria-hidden="true"><svg class="sq-icon" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></span><span class="sq-check__label">Selected</span></label>
+        <label class="sq-check"><input type="checkbox" class="sq-check__input"><span class="sq-check__box" aria-hidden="true"><svg class="sq-icon" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></span><span class="sq-check__label">Unselected</span></label>
+        <label class="sq-check is-disabled"><input type="checkbox" class="sq-check__input" disabled><span class="sq-check__box" aria-hidden="true"><svg class="sq-icon" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></span><span class="sq-check__label">Disabled</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sq-type-overline">Navigation</h2>
+    <nav class="sq-nav" aria-label="Main"><ul class="sq-nav__list">
+      <li><a class="sq-nav__item is-active" aria-current="page" href="#home"><svg class="sq-icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z"/></svg><span>Home</span></a></li>
+      <li><a class="sq-nav__item" href="#work"><svg class="sq-icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M152,112a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,112Zm80-40V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56H80V48a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24v8h40A16,16,0,0,1,232,72ZM96,56h64V48a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8Zm120,57.61V72H40v41.61A184,184,0,0,0,128,136,184,184,0,0,0,216,113.61Z"/></svg><span>Work</span></a></li>
+      <li><a class="sq-nav__item" href="#travel"><svg class="sq-icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M215.52,197.26a8,8,0,0,1-1.86,8.39l-24,24A8,8,0,0,1,184,232a7.09,7.09,0,0,1-.79,0,8,8,0,0,1-5.87-3.52l-44.07-66.12L112,183.59V208a8,8,0,0,1-2.34,5.65s-14,14.06-15.88,15.88A7.91,7.91,0,0,1,91,231.41a8,8,0,0,1-10.41-4.35l-.06-.15-14.7-36.76L29,175.42a8,8,0,0,1-2.69-13.08l16-16A8,8,0,0,1,48,144H72.4l21.27-21.27L27.56,78.65a8,8,0,0,1-1.22-12.32l24-24a8,8,0,0,1,8.39-1.86l85.94,31.25L176.2,40.19a28,28,0,0,1,39.6,39.6l-31.53,31.53Z"/></svg><span>Travel</span></a></li>
+      <li><a class="sq-nav__item" href="#play"><svg class="sq-icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M247.44,173.75a.68.68,0,0,0,0-.14L231.05,89.44c0-.06,0-.12,0-.18A60.08,60.08,0,0,0,172,40H83.89a59.88,59.88,0,0,0-59,49.52L8.58,173.61a.68.68,0,0,0,0,.14,36,36,0,0,0,60.9,31.71l.35-.37L109.52,160h37l39.71,45.09c.11.13.23.25.35.37A36.08,36.08,0,0,0,212,216a36,36,0,0,0,35.43-42.25ZM104,112H96v8a8,8,0,0,1-16,0v-8H72a8,8,0,0,1,0-16h8V88a8,8,0,0,1,16,0v8h8a8,8,0,0,1,0,16Zm40-8a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H152A8,8,0,0,1,144,104Zm84.37,87.47a19.84,19.84,0,0,1-12.9,8.23A20.09,20.09,0,0,1,198,194.31L167.8,160H172a60,60,0,0,0,51-28.38l8.74,45A19.82,19.82,0,0,1,228.37,191.47Z"/></svg><span>Play</span></a></li>
+      <li><a class="sq-nav__item" href="#growth"><svg class="sq-icon" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16h8V136a8,8,0,0,1,8-8H72a8,8,0,0,1,8,8v64H96V88a8,8,0,0,1,8-8h32a8,8,0,0,1,8,8V200h16V40a8,8,0,0,1,8-8h40a8,8,0,0,1,8,8V200h8A8,8,0,0,1,232,208Z"/></svg><span>Growth</span></a></li>
+    </ul></nav>
+  </section>
+</main>
+<script>
+  // Theme toggle
+  const root = document.documentElement, themeBtn = document.getElementById('theme');
+  themeBtn.addEventListener('click', () => {
+    const day = root.dataset.theme !== 'day';
+    root.dataset.theme = day ? 'day' : 'night';
+    themeBtn.textContent = day ? 'Switch to Night' : 'Switch to Day';
+  });
+  // Switches
+  document.querySelectorAll('.sq-switch__track').forEach(b => b.addEventListener('click', () => {
+    const on = b.getAttribute('aria-checked') !== 'true';
+    b.setAttribute('aria-checked', String(on)); b.classList.toggle('is-on', on);
+  }));
+  // Favorite hearts
+  const heart = ["M178,36c-20.09,0-37.92,7.93-50,21.56C115.92,43.93,98.09,36,78,36a66.08,66.08,0,0,0-66,66c0,72.34,105.81,130.14,110.31,132.57a12,12,0,0,0,11.38,0C138.19,232.14,244,174.34,244,102A66.08,66.08,0,0,0,178,36Zm-5.49,142.36A328.69,328.69,0,0,1,128,210.16a328.69,328.69,0,0,1-44.51-31.8C61.82,159.77,36,131.42,36,102A42,42,0,0,1,78,60c17.8,0,32.7,9.4,38.89,24.54a12,12,0,0,0,22.22,0C145.3,69.4,160.2,60,178,60a42,42,0,0,1,42,42C220,131.42,194.18,159.77,172.51,178.36Z"], heartFill = ["M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"];
+  document.querySelectorAll('.sq-card__fav').forEach(b => b.addEventListener('click', () => {
+    const on = b.getAttribute('aria-pressed') !== 'true';
+    b.setAttribute('aria-pressed', String(on)); b.classList.toggle('is-on', on);
+    b.querySelector('path').setAttribute('d', (on ? heartFill : heart)[0]);
+  }));
+  // Nav tabs
+  document.querySelectorAll('.sq-nav__item').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelectorAll('.sq-nav__item').forEach(x => { x.classList.remove('is-active'); x.removeAttribute('aria-current'); });
+    a.classList.add('is-active'); a.setAttribute('aria-current', 'page');
+  }));
+  // Alerts
+  document.querySelectorAll('.sq-alert__close').forEach(b => b.addEventListener('click', () => b.closest('.sq-alert').remove()));
+  // Select placeholder color
+  document.querySelectorAll('.sq-select').forEach(s => s.addEventListener('change', () => s.classList.toggle('is-empty', !s.value)));
+</script>
+</body>
+</html>
